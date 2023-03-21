@@ -1,6 +1,3 @@
-/**
- * 1568=higher G
- */
 function _4_secetion1 () {
     beat = music.beat(BeatFraction.Half) / 1
     for (let index = 0; index < 2; index++) {
@@ -468,9 +465,6 @@ function secetion5 () {
     music.playTone(220, beat)
     music.playTone(175, beat)
 }
-input.onGesture(Gesture.Shake, function () {
-    _4_secetion3()
-})
 function expunged4 () {
     for (let index = 0; index < 2; index++) {
         _4_secetion1()
@@ -873,8 +867,10 @@ function _3_secetion3 () {
 input.onButtonPressed(Button.AB, function () {
     if (expunged == 34) {
         expunged = 12
+        basic.showNumber(1)
     } else {
         expunged = 34
+        basic.showNumber(2)
     }
 })
 input.onButtonPressed(Button.B, function () {
@@ -1242,6 +1238,9 @@ function _4_secetion2 () {
     for (let index = 0; index < 16; index++) {
         music.playTone(330, beat)
     }
+    for (let index = 0; index < 16; index++) {
+        music.playTone(330, beat)
+    }
 }
 function expunged2 () {
     for (let index = 0; index < 2; index++) {
@@ -1515,10 +1514,8 @@ function expunged3 () {
 let beat = 0
 let expunged = 0
 expunged = 12
-basic.forever(function () {
-    music.setTempo(250)
-    music.setTempo(250)
-})
+music.setTempo(250)
+basic.showNumber(1)
 basic.forever(function () {
 	
 })
